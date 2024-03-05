@@ -1,4 +1,4 @@
-import { cssBundleHref } from "@remix-run/css-bundle";
+import stylesheet from "styles/global.css";
 import type { LinksFunction } from "@remix-run/node";
 import {
   Links,
@@ -8,10 +8,13 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import PageNotFound from "~/components/four-oh-four";
 
-export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-];
+export const links: LinksFunction = () => {
+  return[
+    {rel:"stylesheet" , href:stylesheet,},
+  ];
+};
 
 export default function App() {
   return (
@@ -19,6 +22,7 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://kit.fontawesome.com/05168aa044.js" crossOrigin="anonymous"></script>
         <Meta />
         <Links />
       </head>
@@ -27,6 +31,22 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+      </body>
+    </html>
+  );
+}
+
+export function ErrorBoundary() {
+  return (
+    <html>
+      <head>
+        <title>Something weird happened...</title>
+        <Meta />
+        <Links />
+      </head>
+      <body>
+        <PageNotFound />
+        <Scripts />
       </body>
     </html>
   );

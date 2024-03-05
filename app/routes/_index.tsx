@@ -1,41 +1,24 @@
 import type { MetaFunction } from "@remix-run/node";
+import NavPage from "~/components/NavPage";
+import { Helmet } from "react-helmet";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "La Course" },
+    { name: "description", content: "Le Mans & Tour de France" },
   ];
 };
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-    </div>
+    <main>
+      <Helmet>
+        <script
+          src="https://kit.fontawesome.com/05168aa044.js"
+          crossOrigin="anonymous"
+        ></script>
+      </Helmet>
+      <NavPage />
+    </main>
   );
 }

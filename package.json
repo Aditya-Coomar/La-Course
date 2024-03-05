@@ -17,12 +17,16 @@
     "@remix-run/serve": "^2.8.0",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-player": "^2.15.1",
+    "react-typed": "^2.0.12"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.8.0",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
+    "@types/react-helmet": "^6.1.11",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
     "eslint": "^8.38.0",
@@ -31,6 +35,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.1.6"
   },
   "engines": {

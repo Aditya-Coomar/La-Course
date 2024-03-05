@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Anta&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Inconsolata:wght@200..900&family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, #160101, #000000);
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.page-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.hero-le-mans {
+  background-image: url("/le-mans-hero.jpeg");
+  background-size: cover;
+  background-position: left center;
+}
+
+.hero-tour-de-france {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/tour-de-france-hero.jpeg");
+  background-size: cover;
+  background-position: left center;
+}
+
+@media only screen and (max-width: 768px) {
+  .vertical-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.date {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  color: transparent;
+}
+
+.team-number {
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: red;
+  color: transparent;
+}
+
+.history-period {
+  font-family: "Madimi One", sans-serif;
+}
+
+.horizontal-center {
+  position: absolute;
+  left: 50%;
+  -ms-transform: translateX(-50%, -50%);
+  transform: translateX(-50%, -50%);
+}
