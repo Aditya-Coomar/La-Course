@@ -30,7 +30,7 @@ const TeamCard = ({
         <div className="w-[40px] h-[22px] mx-auto md:w-[60px] md:[34px]">
           <img src={country} alt={`${country}`} />
         </div>
-        <div className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl py-3 mt-2 sm:mt-4">
+        <div className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl py-3 mt-2 sm:mt-6">
           {team}
         </div>
         <div className="flex flex-wrap gap-2 items-center justify-center md:gap-4 lg:gap-6 text-sm sm:text-base md:text-lg lg:text-xl mt-2">
@@ -101,7 +101,7 @@ export default function Season2024() {
           className="w-full rounded-md"
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 justify-stretch items-stretch gap-5 pt-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 justify-stretch items-stretch gap-5 pt-6">
         <div className="bg-[rgba(0,0,0,0.5)] rounded-md">
           <div className="bg-white py-3 px-4 rounded-t-md font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl history-period">
             <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">
@@ -142,7 +142,7 @@ export default function Season2024() {
       </div>
 
       {/* CATEGORY HYPERCAR */}
-      <div className="bg-[rgba(0,0,0,0.3)] rounded-md mt-6">
+      <div className="bg-[rgba(0,0,0,0.4)] rounded-md mt-6">
         <div className="bg-white py-3 px-4 rounded-t-md font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl history-period">
           <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">
             Entries for 2024 - Hypercar
@@ -197,7 +197,7 @@ export default function Season2024() {
       </div>
 
       {/* CATEGORY LM P2 */}
-      <div className="bg-[rgba(0,0,0,0.3)] rounded-md mt-6">
+      <div className="bg-[rgba(0,0,0,0.4)] rounded-md mt-6">
         <div className="bg-white py-3 px-4 rounded-t-md font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl history-period">
           <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">
             Entries for 2024 - LM P2
@@ -252,7 +252,7 @@ export default function Season2024() {
       </div>
 
       {/* CATEGORY LMGT3 */}
-      <div className="bg-[rgba(0,0,0,0.3)] rounded-md mt-6">
+      <div className="bg-[rgba(0,0,0,0.4)] rounded-md mt-6">
         <div className="bg-white py-3 px-4 rounded-t-md font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl history-period">
           <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">
             Entries for 2024 - LMGT3
