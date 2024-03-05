@@ -26,6 +26,23 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(39, 38, 38);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3d3b3b;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(24, 23, 23);
+}
+
 body {
   background-image: linear-gradient(to bottom right, #160101, #000000);
   min-height: 100vh;

@@ -8,7 +8,7 @@ export default function Description() {
       <div className="pt-2 pb-8">
         <hr className="w-full h-[2px] bg-gradient-to-r from-red-600 via-blue-600 to-blue-600 border-0" />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch md:gap-10">
         <div>
           <video autoPlay={true} controls={false} muted loop>
             <source src={LeMans_teaser} />
@@ -23,7 +23,7 @@ export default function Description() {
           24 Hours of Daytona and 12 Hours of Sebring that make up the informal
           Triple Crown of endurance racing. Run since 1923, it is the oldest
           active endurance racing event in the world.
-          <div className="mt-4 md:pt-3">
+          <div className="mt-4 md:pt-3 flex flex-wrap gap-3">
             <a
               href="#le_mans_2024"
               type="button"
@@ -31,6 +31,15 @@ export default function Description() {
             >
               <span className="bg-gradient-to-r from-red-900 to-blue-600 bg-clip-text text-transparent">
                 2024 Season
+              </span>
+            </a>
+            <a
+              href="#le_mans_2023"
+              type="button"
+              className="align-middle py-3 px-5 bg-white text-xl md:text-2xl rounded-md font-extrabold"
+            >
+              <span className="bg-gradient-to-r from-red-900 to-blue-600 bg-clip-text text-transparent">
+                2023 Season
               </span>
             </a>
           </div>

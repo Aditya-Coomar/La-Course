@@ -9,6 +9,11 @@ import le_mans_2024 from "~/assets/images/2024-le-mans.png";
 import le_mans_circuit from "~/assets/images/le-mans-circuit.jpg";
 import rolex_advertisement_1 from "~/assets/images/rolex/rolex-1.webp";
 import rolex_advertisement_2 from "~/assets/images/rolex/rolex-2.jpg";
+import rolex_advertisement_3 from "~/assets/images/rolex/rolex-3.jpg";
+import rolex_advertisement_4 from "~/assets/images/rolex/rolex-4.jpg";
+import rolex_advertisement_5 from "~/assets/images/rolex/rolex-5.jpg";
+import le_mans_2023 from "~/assets/images/2023-le-mans.jpg";
+import le_mans_2023_podium from "~/assets/images/podium-2023-le-mans.jpeg";
 
 export {
     le_mans_logo,
@@ -22,4 +27,9 @@ export {
     rolex_advertisement_2,
     le_mans_2024,
     le_mans_circuit,
+    le_mans_2023,
+    le_mans_2023_podium,
+    rolex_advertisement_3,
+    rolex_advertisement_4,
+    rolex_advertisement_5
 }
