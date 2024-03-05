@@ -26,7 +26,7 @@ const TeamCard = ({
 }: TeamCardProps) => {
   return (
     <main>
-      <div className="text-white font-[Montserrat] bg-[rgba(0,0,0,0.5)] px-2 py-3 text-center items-center rounded-md">
+      <div className="text-white font-[Montserrat] bg-[rgba(0,0,0,0.5)] px-2 py-3 text-center items-center rounded-md h-full">
         <div className="w-[40px] h-[22px] mx-auto md:w-[60px] md:[34px]">
           <img src={country} alt={`${country}`} />
         </div>
