@@ -1,4 +1,5 @@
 import aco from "~/assets/images/aco.png";
+import { ReactTyped } from "react-typed";
 
 export default function Hero({}) {
   return (
@@ -22,7 +23,23 @@ export default function Hero({}) {
           </div>
         </div>
         <div className="text-white italic font-extrabold text-[3rem] md:text-[5rem] md:pl-10 md:pt-[100px] vertical-center uppercase text-center md:text-left">
-          Celebrating Centenary!
+          {"Celebrating "}
+          <ReactTyped
+            strings={[
+              "Centenary",
+              "History",
+              "Racing",
+              "Endurance",
+              "Innovation",
+              "Le Mans",
+            ]}
+            typeSpeed={70}
+            backSpeed={60}
+            backDelay={750}
+            showCursor={false}
+            loop
+          />
+          {"!"}
           <div className="date">12 to 16 June</div>
           <div className="mt-10 md:mt-0 md:pt-3">
             <a

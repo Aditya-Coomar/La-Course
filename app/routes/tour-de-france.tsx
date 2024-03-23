@@ -21,7 +21,9 @@ export default function TourDeFrance() {
       </Helmet>
       <Hero />
       <div className="px-10 py-16 sm:px-14 sm:py-20 bg-gradient-to-br from-neutral-950 via-stone-800 to-yellow-950">
-        <Description />
+        <div className="md:scale-95">
+          <Description />
+        </div>
       </div>
     </main>
   );

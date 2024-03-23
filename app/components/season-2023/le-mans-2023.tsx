@@ -75,11 +75,15 @@ const WinnerCard = ({
   );
 };
 
-export default function Season2024() {
-    const [winner, show] = useState(false);
-    const handleDisplay = () => {
-        show(!winner);
-    };
+export default function Season2023() {
+  const [winner, show] = useState(false);
+  const handleDisplay = () => {
+    show(!winner);
+  };
+  const [lang, setLang] = useState(false);
+  const handleTranslate = () => {
+    setLang(!lang);
+  };
   return (
     <section>
       <br />
@@ -88,10 +92,22 @@ export default function Season2024() {
         id="le_mans_2023"
         className="bg-gradient-to-r from-red-600 via-blue-600 to-blue-600 bg-clip-text text-transparent font-extrabold text-3xl sm:text-5xl md:text-6xl lg:text-7xl pt-14 pb-4"
       >
-        2023 - The Race of the Century
+        {lang ? "2023 - La course du siècle" : "2023 - The Race of the Century"}
       </div>
-      <div className="pt-2 pb-8">
+      <div className="pt-2 pb-4">
         <hr className="w-full h-[2px] bg-gradient-to-r from-red-600 via-blue-600 to-blue-600 border-0" />
+      </div>
+      <div className="flex justify-end px-2 pb-6">
+        <div className="align-middle py-1 px-2 bg-white text-sm sm:text-base md:text-lg rounded-sm font-bold">
+          <button
+            onClick={handleTranslate}
+            className="bg-gradient-to-r from-red-900 to-blue-600 bg-clip-text text-transparent"
+            type="button"
+          >
+            <i className="fa-solid fa-globe"></i>&nbsp;
+            <span>{lang ? "English" : "Français"}</span>
+          </button>
+        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-stretch items-stretch">
         <img
@@ -109,27 +125,51 @@ export default function Season2024() {
         <div className="bg-[rgba(0,0,0,0.5)] rounded-md">
           <div className="bg-white py-3 px-4 rounded-t-md font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl history-period">
             <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">
-              Background
+              {lang ? "Aperçu" : "Background"}
             </span>
           </div>
           <div className="font-[Quicksand] py-5 px-6 bg-gradient-to-br from-white to-white bg-clip-text text-transparent text-base sm:text-lg md:text-xl">
-            The 2023 24 Hours of Le Mans, held at the Circuit de la Sarthe near
-            Le Mans, France between 10 and 11 June, was the 91st running of the
-            race, the 100th anniversary of its first edition in 1923 and the
-            fourth round of the 2023 FIA World Endurance Championship.
-            <br />
-            <br />
-            Toyota drivers Sébastien Buemi, Brendon Hartley, and Ryō Hirakawa
-            led the Hypercar Drivers' Championship with 71 points, followed by
-            teammates Mike Conway, Kamui Kobayashi, and José María López.
-            Ferrari AF Corse's Antonio Fuoco, Miguel Molina, and Nicklas Nielsen
-            were third, with Cadillac Racing's Earl Bamber, Alex Lynn, and
-            Richard Westbrook fourth. In the FIA Endurance Trophy, United
-            Autosports' Philip Hanson and Frederick Lubin led LMP2, while
-            Corvette Racing's Nicky Catsburg, Ben Keating, and Nicolás Varrone
-            led LMGTE Am. Toyota led Ferrari in the Hypercar World Endurance
-            Championship, United Autosports led Team WRT in LMP2, and Corvette
-            Racing led Richard Mille AF Corse in LMGTE Am.
+            {lang ? (
+              <div>
+                Les 24 Heures du Mans 2023, organisées sur le Circuit de la Sarthe
+               près du Mans, en France, entre le 10 et le 11 juin, était la 91e édition
+               de la course, le 100ème anniversaire de sa première édition en 1923
+               et la quatrième manche du Championnat du Monde d'Endurance FIA 2023.
+               <br />
+               <br />
+               Les pilotes Toyota Sébastien Buemi, Brendon Hartley et Ryō Hirakawa
+               a mené le championnat des pilotes Hypercar avec 71 points, suivi de
+               ses coéquipiers Mike Conway, Kamui Kobayashi et José María López.
+               Antonio Fuoco, Miguel Molina et Nicklas de Ferrari AF Corse
+               Nielsen était troisième, avec Earl Bamber, Alex Lynn, de Cadillac Racing.
+               et Richard Westbrook quatrième. En Trophée Endurance FIA, United
+               Philip Hanson et Frederick Lubin d'Autosports ont mené la LMP2, tandis que
+               Nicky Catsburg, Ben Keating et Nicolás Varrone de Corvette Racing
+               mené en LMGTE Am. Toyota a mené Ferrari dans l'Hypercar World Endurance
+               Championnat, United Autosports a mené l'équipe WRT en LMP2 et Corvette
+               Racing a mené Richard Mille AF Corse en LMGTE Am.
+              </div>
+            ) : (
+              <div>
+              The 2023 24 Hours of Le Mans, held at the Circuit de la Sarthe
+              near Le Mans, France between 10 and 11 June, was the 91st running
+              of the race, the 100th anniversary of its first edition in 1923
+              and the fourth round of the 2023 FIA World Endurance Championship.
+              <br />
+              <br />
+              Toyota drivers Sébastien Buemi, Brendon Hartley, and Ryō Hirakawa
+              led the Hypercar Drivers' Championship with 71 points, followed by
+              teammates Mike Conway, Kamui Kobayashi, and José María López.
+              Ferrari AF Corse's Antonio Fuoco, Miguel Molina, and Nicklas
+              Nielsen were third, with Cadillac Racing's Earl Bamber, Alex Lynn,
+              and Richard Westbrook fourth. In the FIA Endurance Trophy, United
+              Autosports' Philip Hanson and Frederick Lubin led LMP2, while
+              Corvette Racing's Nicky Catsburg, Ben Keating, and Nicolás Varrone
+              led LMGTE Am. Toyota led Ferrari in the Hypercar World Endurance
+              Championship, United Autosports led Team WRT in LMP2, and Corvette
+              Racing led Richard Mille AF Corse in LMGTE Am.
+            </div>
+            )}
           </div>
         </div>
         <div className="flex flex-row gap-1">
@@ -149,14 +189,22 @@ export default function Season2024() {
       <div className="bg-[rgba(0,0,0,0.5)] rounded-md mt-6">
         <div className="bg-white py-3 px-4 rounded-t-md font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl history-period">
           <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">
-            2023 - Podium Finish
+            2023 - {lang ? "Arrivée sur le podium" : "Podium Finish"}
           </span>
         </div>
-        <div className={winner ? "grid grid-cols-1 lg:grid-cols-3 justify-center items-stretch gap-5 mt-2 md:mt-4 text-center px-3 py-3" : "hidden"}>
+        <div
+          className={
+            winner
+              ? "grid grid-cols-1 lg:grid-cols-3 justify-center items-stretch gap-5 mt-2 md:mt-4 text-center px-3 py-3"
+              : "hidden"
+          }
+        >
           {/* CATEGORY HYPERCAR */}
           <div className="bg-[rgba(0,0,0,0.4)] rounded-md mt-6">
             <div className="bg-white py-3 px-4 rounded-t-md font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl history-period text-center">
-              <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">Hypercar</span>
+              <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">
+                Hypercar
+              </span>
             </div>
             <div>
               <div
@@ -184,7 +232,9 @@ export default function Season2024() {
           {/* CATEGORY LM P2 */}
           <div className="bg-[rgba(0,0,0,0.4)] rounded-md mt-6">
             <div className="bg-white py-3 px-4 rounded-t-md font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl history-period text-center">
-              <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">LM P2</span>
+              <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">
+                LM P2
+              </span>
             </div>
             <div>
               <div
@@ -212,7 +262,9 @@ export default function Season2024() {
           {/* CATEGORY LM GTE AM */}
           <div className="bg-[rgba(0,0,0,0.4)] rounded-md mt-6">
             <div className="bg-white py-3 px-4 rounded-t-md font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl history-period text-center">
-              <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">LM GTE AM</span>
+              <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">
+                LM GTE AM
+              </span>
             </div>
             <div>
               <div
@@ -238,30 +290,32 @@ export default function Season2024() {
           </div>
         </div>
         <div className="flex flex-wrap justify-center items-center py-5">
-            {winner ? (
-              <div className="items-center text-white font-extrabold text-xl">
+          {winner ? (
+            <div className="items-center text-white font-extrabold text-xl">
               {/* Close Button */}
               <button
                 onClick={handleDisplay}
                 type="button"
-                className="mx-auto w-10 h-10 rounded-full border-2 border-white" title="expand"
+                className="mx-auto w-10 h-10 rounded-full border-2 border-white"
+                title="expand"
               >
                 <i className="fa-solid fa-xmark"></i>
               </button>
             </div>
-            ) : (
-              <div className="items-center text-white font-extrabold text-xl mt-3">
-                {/* Open Button */}
-                <button
-                  onClick={handleDisplay}
-                  type="button"
-                  className="mx-auto animate-bounce w-10 h-10 rounded-full border-2 border-white" title="expand"
-                >
-                  <i className="fa-solid fa-angle-down align-middle"></i>
-                </button>
-              </div>
-            )}
-          </div>
+          ) : (
+            <div className="items-center text-white font-extrabold text-xl mt-3">
+              {/* Open Button */}
+              <button
+                onClick={handleDisplay}
+                type="button"
+                className="mx-auto animate-bounce w-10 h-10 rounded-full border-2 border-white"
+                title="expand"
+              >
+                <i className="fa-solid fa-angle-down align-middle"></i>
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

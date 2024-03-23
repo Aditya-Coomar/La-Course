@@ -14,6 +14,7 @@ import rolex_advertisement_4 from "~/assets/images/rolex/rolex-4.jpg";
 import rolex_advertisement_5 from "~/assets/images/rolex/rolex-5.jpg";
 import le_mans_2023 from "~/assets/images/2023-le-mans.jpg";
 import le_mans_2023_podium from "~/assets/images/podium-2023-le-mans.jpeg";
+import michelin from "~/assets/images/michelin.jpg";
 
 export {
     le_mans_logo,
@@ -31,5 +32,6 @@ export {
     le_mans_2023_podium,
     rolex_advertisement_3,
     rolex_advertisement_4,
-    rolex_advertisement_5
+    rolex_advertisement_5,
+    michelin,
 }

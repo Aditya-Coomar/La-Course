@@ -54,22 +54,4 @@ export default function NavPage() {
   );
 }
 
-{
-  /*<section className="page-center">
-      <div className="text-[2rem] md:text-[5rem] text-center font-extrabold bg-gradient-to-r from-amber-100 to-red-900 bg-clip-text text-transparent">
-        La Course
-      </div>
-      <div className="grid grid-cols-2 gap-8 justify-items-center pt-16">
-        <div className="p-4">
-          <Link to="le-mans">
-            <img src={le_mans_logo} alt="Le Mans" className="rounded-lg shadow-md shadow-red-950 ring-offset-2 ring-offset-red-950" />
-          </Link>
-        </div>
-        <div className="p-4">
-          <Link to="tour-de-france">
-            <img src={tour_de_france_logo} alt="Tour De France" className="rounded-lg shadow-md shadow-red-950" />
-          </Link>
-        </div>
-      </div>
-  </section>*/
-}
+

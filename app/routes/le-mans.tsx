@@ -4,7 +4,9 @@ import Description from "~/components/about/desc-le-mans";
 import History from "~/components/history/history-le-mans";
 import Season2024 from "~/components/season-2024/le-mans-2024";
 import Season2023 from "~/components/season-2023/le-mans-2023";
+import GalleryLeMans from "~/components/gallery/gallery-le-mans";
 import { Helmet } from "react-helmet";
+import { michelin } from "~/assets";
 
 export const meta: MetaFunction = () => {
   return [
@@ -23,11 +25,44 @@ export default function LeMans() {
         ></script>
       </Helmet>
       <Hero />
-      <div className="px-10 py-16 sm:px-14 sm:py-20 bg-gradient-to-br from-neutral-950 to-indigo-950">
-        <Description />
-        <History />
-        <Season2024 />
-        <Season2023 />
+      <div className="px-8 py-8 sm:px-8 sm:py-8 bg-gradient-to-br from-neutral-950 to-indigo-950">
+        <div className="md:scale-[97%]">
+          <Description />
+          <History />
+          <Season2024 />
+          <Season2023 />
+          <GalleryLeMans />
+        </div>
+        <div className="px-8 pt-2 md:pt-0 pb-2 md:pb-5 md:-m-8">
+          <hr className="w-full h-[2px] bg-gradient-to-r from-red-600 via-blue-600 to-blue-600 border-0" />
+        </div>
+        <div className="mt-4 md:pt-3 flex flex-wrap gap-3 justify-center">
+          <a
+            href="https://www.24h-lemans.com"
+            type="button"
+            className="align-middle py-3 px-5 bg-white text-xl md:text-2xl rounded-md font-extrabold"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span className="bg-gradient-to-r from-red-900 to-blue-600 bg-clip-text text-transparent">
+              Official Website <i className="fa-solid fa-arrow-right"></i>
+            </span>
+          </a>
+          <a
+            href="https://www.24h-lemans.com/en/news"
+            type="button"
+            className="align-middle py-3 px-5 bg-white text-xl md:text-2xl rounded-md font-extrabold"
+            rel="noopener noreferrer"
+            target="_blank" 
+          >
+            <span className="bg-gradient-to-r from-red-900 to-blue-600 bg-clip-text text-transparent">
+              What's in the News ?
+            </span>
+          </a>
+        </div>
+      </div>
+      <div className="">
+        <img src={michelin} alt="Michelin" className="w-full max-h-[600px]" />
       </div>
     </main>
   );

@@ -5,7 +5,11 @@ import {
   le_mans_circuit,
 } from "~/assets";
 import { useState } from "react";
-import { dataHypercar, dataLMGT3, dataLMP2 } from "~/components/season-2024/data/teams-data-le-mans-2024";
+import {
+  dataHypercar,
+  dataLMGT3,
+  dataLMP2,
+} from "~/components/season-2024/data/teams-data-le-mans-2024";
 
 interface TeamCardProps {
   country: string;
@@ -76,6 +80,11 @@ export default function Season2024() {
     lmgt3Accordian(!lmgt3Open);
   };
 
+  const [lang, setLang] = useState(false);
+  const handleTranslate = () => {
+    setLang(!lang);
+  };
+
   return (
     <section>
       <br />
@@ -84,10 +93,22 @@ export default function Season2024() {
         id="le_mans_2024"
         className="bg-gradient-to-r from-red-600 via-blue-600 to-blue-600 bg-clip-text text-transparent font-extrabold text-3xl sm:text-5xl md:text-6xl lg:text-8xl pt-14"
       >
-        The Season of 2024
+        {lang ? "La saison 2024" : "The Season of 2024"}
       </div>
-      <div className="pt-2 pb-8">
+      <div className="pt-2 pb-4">
         <hr className="w-full h-[2px] bg-gradient-to-r from-red-600 via-blue-600 to-blue-600 border-0" />
+      </div>
+      <div className="flex justify-end px-2 pb-6">
+        <div className="align-middle py-1 px-2 bg-white text-sm sm:text-base md:text-lg rounded-sm font-bold">
+          <button
+            onClick={handleTranslate}
+            className="bg-gradient-to-r from-red-900 to-blue-600 bg-clip-text text-transparent"
+            type="button"
+          >
+            <i className="fa-solid fa-globe"></i>&nbsp;
+            <span>{lang ? "English" : "Français"}</span>
+          </button>
+        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-stretch items-stretch">
         <img
@@ -105,26 +126,53 @@ export default function Season2024() {
         <div className="bg-[rgba(0,0,0,0.5)] rounded-md">
           <div className="bg-white py-3 px-4 rounded-t-md font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl history-period">
             <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">
-              Background
+              {lang ? "Aperçu" : "Background"}
             </span>
           </div>
           <div className="font-[Quicksand] py-5 px-6 bg-gradient-to-br from-white to-white bg-clip-text text-transparent text-base sm:text-lg md:text-xl">
-            The 2024 24 Hours of Le Mans will be the 92nd running of the 24-hour
-            race organised by the Automobile Club de l'Ouest. The LM GTE Am
-            class of 2023 will be transitioned to LMGT3 for the 2024 race. While
-            LMP2 cars will not be running in the 2024 FIA World Endurance
-            Championship, Automobile Club de l’Ouest will allocate a minimum of
-            15 grid slots to LMP2 cars for the race. A number of new and
-            returning manufacturers are hoping to field cars in the 2024 event,
-            including Alpine, Ford, BMW, and McLaren. LMGT3 models that do not
-            compete for the full 2024 FIA WEC seasons are not permitted to enter
-            at the 24 hour race.
-            <br />
-            <br />
-            Le Mans automatic invites include WEC, ELMS, ALMS, and GTWCE
-            championship winners. Second-place LMP2 ELMS finishers and 3 IMSA
-            teams receive invites, one in Hypercar at IMSA's discretion, and one
-            each for Jim Truman and Bob Akin awards.
+            {lang ? (
+              <div>
+                Les 24 Heures du Mans 2024 seront la 92e édition de la course
+                de 24 heures organisée par l'Automobile Club de l'Ouest. La
+                classe LM GTE Am de 2023 sera transitionnée en LMGT3 pour la
+                course de 2024. Alors que les voitures LMP2 ne courront pas dans
+                le Championnat du Monde d'Endurance de la FIA 2024, l'Automobile
+                Club de l'Ouest allouera un minimum de 15 places en grille aux
+                voitures LMP2 pour la course. Un certain nombre de nouveaux et
+                anciens constructeurs espèrent aligner des voitures dans
+                l'événement 2024, notamment Alpine, Ford, BMW et McLaren. Les
+                modèles LMGT3 qui ne concourent pas pour l'ensemble des saisons
+                2024 du FIA WEC ne sont pas autorisés à participer à la course
+                de 24 heures.
+                <br />
+                <br />
+                Les invitations automatiques du Mans incluent les vainqueurs du
+                championnat WEC, ELMS, ALMS et GTWCE. Les deuxièmes de la classe
+                LMP2 ELMS et 3 équipes IMSA reçoivent des invitations, une en
+                Hypercar à la discrétion de l'IMSA, et une chacune pour les
+                prix Jim Truman et Bob Akin.
+              </div>
+            ) : (
+              <div>
+              The 2024 24 Hours of Le Mans will be the 92nd running of the
+              24-hour race organised by the Automobile Club de l'Ouest. The LM
+              GTE Am class of 2023 will be transitioned to LMGT3 for the 2024
+              race. While LMP2 cars will not be running in the 2024 FIA World
+              Endurance Championship, Automobile Club de l’Ouest will allocate a
+              minimum of 15 grid slots to LMP2 cars for the race. A number of
+              new and returning manufacturers are hoping to field cars in the
+              2024 event, including Alpine, Ford, BMW, and McLaren. LMGT3 models
+              that do not compete for the full 2024 FIA WEC seasons are not
+              permitted to enter at the 24 hour race.
+              <br />
+              <br />
+              Le Mans automatic invites include WEC, ELMS, ALMS, and GTWCE
+              championship winners. Second-place LMP2 ELMS finishers and 3 IMSA
+              teams receive invites, one in Hypercar at IMSA's discretion, and
+              one each for Jim Truman and Bob Akin awards.
+            </div>
+            )}
+            
           </div>
         </div>
         <div className="flex flex-row gap-1">
@@ -145,7 +193,7 @@ export default function Season2024() {
       <div className="bg-[rgba(0,0,0,0.4)] rounded-md mt-6">
         <div className="bg-white py-3 px-4 rounded-t-md font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl history-period">
           <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">
-            Entries for 2024 - Hypercar
+            {lang ? "Entrées pour" : "Entries for"} 2024 - Hypercar
           </span>
         </div>
         <div>
@@ -171,22 +219,24 @@ export default function Season2024() {
           <div className="flex flex-wrap justify-center items-center py-5">
             {hypercarOpen ? (
               <div className="items-center text-white font-extrabold text-xl">
-              {/* Close Button */}
-              <button
-                onClick={handleState_hypercar}
-                type="button"
-                className="mx-auto w-10 h-10 rounded-full border-2 border-white" title="expand"
-              >
-                <i className="fa-solid fa-xmark"></i>
-              </button>
-            </div>
+                {/* Close Button */}
+                <button
+                  onClick={handleState_hypercar}
+                  type="button"
+                  className="mx-auto w-10 h-10 rounded-full border-2 border-white"
+                  title="expand"
+                >
+                  <i className="fa-solid fa-xmark"></i>
+                </button>
+              </div>
             ) : (
               <div className="items-center text-white font-extrabold text-xl mt-3">
                 {/* Open Button */}
                 <button
                   onClick={handleState_hypercar}
                   type="button"
-                  className="mx-auto animate-bounce w-10 h-10 rounded-full border-2 border-white" title="expand"
+                  className="mx-auto animate-bounce w-10 h-10 rounded-full border-2 border-white"
+                  title="expand"
                 >
                   <i className="fa-solid fa-angle-down align-middle"></i>
                 </button>
@@ -200,7 +250,7 @@ export default function Season2024() {
       <div className="bg-[rgba(0,0,0,0.4)] rounded-md mt-6">
         <div className="bg-white py-3 px-4 rounded-t-md font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl history-period">
           <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">
-            Entries for 2024 - LM P2
+          {lang ? "Entrées pour" : "Entries for"} 2024 - LM P2
           </span>
         </div>
         <div>
@@ -226,22 +276,24 @@ export default function Season2024() {
           <div className="flex flex-wrap justify-center items-center py-5">
             {lmp2Open ? (
               <div className="items-center text-white font-extrabold text-xl">
-              {/* Close Button */}
-              <button
-                onClick={handleState_lmp2}
-                type="button"
-                className="mx-auto w-10 h-10 rounded-full border-2 border-white" title="expand"
-              >
-                <i className="fa-solid fa-xmark"></i>
-              </button>
-            </div>
+                {/* Close Button */}
+                <button
+                  onClick={handleState_lmp2}
+                  type="button"
+                  className="mx-auto w-10 h-10 rounded-full border-2 border-white"
+                  title="expand"
+                >
+                  <i className="fa-solid fa-xmark"></i>
+                </button>
+              </div>
             ) : (
               <div className="items-center text-white font-extrabold text-xl mt-3">
                 {/* Open Button */}
                 <button
                   onClick={handleState_lmp2}
                   type="button"
-                  className="mx-auto animate-bounce w-10 h-10 rounded-full border-2 border-white" title="expand"
+                  className="mx-auto animate-bounce w-10 h-10 rounded-full border-2 border-white"
+                  title="expand"
                 >
                   <i className="fa-solid fa-angle-down align-middle"></i>
                 </button>
@@ -255,7 +307,7 @@ export default function Season2024() {
       <div className="bg-[rgba(0,0,0,0.4)] rounded-md mt-6">
         <div className="bg-white py-3 px-4 rounded-t-md font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl history-period">
           <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">
-            Entries for 2024 - LMGT3
+          {lang ? "Entrées pour" : "Entries for"} 2024 - LMGT3
           </span>
         </div>
         <div>
@@ -281,22 +333,24 @@ export default function Season2024() {
           <div className="flex flex-wrap justify-center items-center py-5">
             {lmgt3Open ? (
               <div className="items-center text-white font-extrabold text-xl">
-              {/* Close Button */}
-              <button
-                onClick={handleState_lmgt3}
-                type="button"
-                className="mx-auto w-10 h-10 rounded-full border-2 border-white" title="expand"
-              >
-                <i className="fa-solid fa-xmark"></i>
-              </button>
-            </div>
+                {/* Close Button */}
+                <button
+                  onClick={handleState_lmgt3}
+                  type="button"
+                  className="mx-auto w-10 h-10 rounded-full border-2 border-white"
+                  title="expand"
+                >
+                  <i className="fa-solid fa-xmark"></i>
+                </button>
+              </div>
             ) : (
               <div className="items-center text-white font-extrabold text-xl mt-3">
                 {/* Open Button */}
                 <button
                   onClick={handleState_lmgt3}
                   type="button"
-                  className="mx-auto animate-bounce w-10 h-10 rounded-full border-2 border-white" title="expand"
+                  className="mx-auto animate-bounce w-10 h-10 rounded-full border-2 border-white"
+                  title="expand"
                 >
                   <i className="fa-solid fa-angle-down align-middle"></i>
                 </button>
