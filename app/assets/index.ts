@@ -15,6 +15,9 @@ import rolex_advertisement_5 from "~/assets/images/rolex/rolex-5.jpg";
 import le_mans_2023 from "~/assets/images/2023-le-mans.jpg";
 import le_mans_2023_podium from "~/assets/images/podium-2023-le-mans.jpeg";
 import michelin from "~/assets/images/michelin.jpg";
+import continental from "~/assets/images/continental-tires.jpg";
+import tour_de_france_2024 from "~/assets/images/Tour-de-France-2024.webp";
+import tour_de_france_circuit from "~/assets/images/tour-de-france-circuit.jpg";
 
 export {
     le_mans_logo,
@@ -34,4 +37,7 @@ export {
     rolex_advertisement_4,
     rolex_advertisement_5,
     michelin,
+    continental,
+    tour_de_france_2024,
+    tour_de_france_circuit
 }
