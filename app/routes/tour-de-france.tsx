@@ -4,6 +4,7 @@ import Description from "~/components/about/desc-tour-de-france";
 import History from "~/components/history/history-tour-de-france";
 import Season2024 from "~/components/season-2024/tour-de-france-2024";
 import Season2023 from "~/components/season-2023/tour-de-france-2023";
+import GalleryTourDeFrance from "~/components/gallery/gallery-tour-de-france";
 import { continental } from "~/assets";
 import { Helmet } from "react-helmet";
 
@@ -30,6 +31,7 @@ export default function TourDeFrance() {
           <History />
           <Season2024 />
           <Season2023 />
+          <GalleryTourDeFrance />
         </div>
         <div className="px-8 pt-2 md:pt-0 pb-2 md:pb-5 md:-m-8">
           <hr className="w-full h-[2px] bg-gradient-to-r from-yellow-400 via-stone-800 to-yellow-600 border-0" />
