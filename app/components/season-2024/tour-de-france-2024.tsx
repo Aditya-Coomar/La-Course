@@ -64,7 +64,7 @@ export default function Season2024() {
       <br />
       <br />
       <div
-        id="le_mans_2024"
+        id="tdf_2024"
         className="bg-gradient-to-r from-yellow-400 to-yellow-950 bg-clip-text text-transparent font-extrabold text-3xl sm:text-5xl md:text-6xl lg:text-8xl pt-14"
       >
         {lang ? "La saison 2024" : "The Season of 2024"}

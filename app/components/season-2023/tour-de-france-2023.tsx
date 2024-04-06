@@ -106,7 +106,7 @@ export default function Season2023() {
       <br />
       <br />
       <div
-        id="le_mans_2023"
+        id="tdf_2023"
         className="bg-gradient-to-r from-yellow-400 via-stone-800 to-yellow-600 bg-clip-text text-transparent font-extrabold text-3xl sm:text-5xl md:text-6xl lg:text-7xl pt-14 pb-4"
       >
         {lang ? "La Saison 2023" : "The Season of 2023"}
