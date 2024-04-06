@@ -18,6 +18,8 @@ import michelin from "~/assets/images/michelin.jpg";
 import continental from "~/assets/images/continental-tires.jpg";
 import tour_de_france_2024 from "~/assets/images/Tour-de-France-2024.webp";
 import tour_de_france_circuit from "~/assets/images/tour-de-france-circuit.jpg";
+import tissot_advertisement_1 from "~/assets/images/tissot/tissot_advertisement_1.jpg";
+import tissot_advertisement_2 from "~/assets/images/tissot/tissot_advertisement_2.jpg";
 
 export {
     le_mans_logo,
@@ -39,5 +41,7 @@ export {
     michelin,
     continental,
     tour_de_france_2024,
-    tour_de_france_circuit
+    tour_de_france_circuit,
+    tissot_advertisement_1,
+    tissot_advertisement_2
 }
