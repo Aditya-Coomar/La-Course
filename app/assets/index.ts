@@ -20,6 +20,10 @@ import tour_de_france_2024 from "~/assets/images/Tour-de-France-2024.webp";
 import tour_de_france_circuit from "~/assets/images/tour-de-france-circuit.jpg";
 import tissot_advertisement_1 from "~/assets/images/tissot/tissot_advertisement_1.jpg";
 import tissot_advertisement_2 from "~/assets/images/tissot/tissot_advertisement_2.jpg";
+import skoda_advertisement_1 from "~/assets/images/skoda/skoda_advertisement_1.jpg";
+import skoda_advertisement_2 from "~/assets/images/skoda/skoda_advertisement_2.jpg";
+import tour_de_france_2023 from "~/assets/images/tour-de-france-2023.jpeg";
+import tour_de_france_2023_podium from "~/assets/images/tour-de-france-podium.webp";
 
 export {
     le_mans_logo,
@@ -43,5 +47,9 @@ export {
     tour_de_france_2024,
     tour_de_france_circuit,
     tissot_advertisement_1,
-    tissot_advertisement_2
+    tissot_advertisement_2,
+    skoda_advertisement_1,
+    skoda_advertisement_2,
+    tour_de_france_2023,
+    tour_de_france_2023_podium
 }

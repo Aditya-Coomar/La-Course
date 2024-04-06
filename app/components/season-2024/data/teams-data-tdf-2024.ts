@@ -71,9 +71,9 @@ const dataTDFteams2024 = [{
 {
     index:"11",
     country:"belgium.webp",
-    team:"NTERMARCHÉ - WANTY",
+    team:"INTERMARCHÉ - WANTY",
     cat:"WorldTeams",
-    teamLogo:"NTERMARCHÉ - WANTY.png",
+    teamLogo:"INTERMARCHÉ - WANTY.png",
 },
 {
     index:"12",
@@ -112,7 +112,7 @@ const dataTDFteams2024 = [{
 },
 {
     index:"17",
-    country:"",
+    country:"netherlands.png",
     team:"TEAM VISMA | LEASE A BIKE",
     cat:"WorldTeams",
     teamLogo:"TEAM VISMA LEASE A BIKE.png",

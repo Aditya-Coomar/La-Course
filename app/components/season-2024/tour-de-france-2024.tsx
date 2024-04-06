@@ -20,7 +20,7 @@ const TeamCard = ({country,team, teamLogo, category}: TeamCardProps) => {
       <div className="text-white font-[Montserrat] bg-[rgba(0,0,0,0.5)] px-2 py-3 text-center items-center rounded-md h-full">
         <div className="grid grid-cols-1 gap-10 md:gap-12">
           <div className="w-[40px] h-[22px] mx-auto md:w-[60px] md:[34px]">
-            <img src={`/flag/${country}`} alt={country} />
+            <img src={`/flag/${country}`} alt={country} title={country} />
           </div>
           <div className="w-[150px] h-[150px] mx-auto">
             <img
@@ -28,6 +28,7 @@ const TeamCard = ({country,team, teamLogo, category}: TeamCardProps) => {
                 `/tdf-team/${teamLogo}`
               }
               alt={teamLogo}
+              title={team}
             />
           </div>
         </div>
@@ -53,17 +54,6 @@ export default function Season2024() {
   const handleState_hypercar = () => {
     hypercarAccordian(!hypercarOpen);
   };
-
-  const [lmp2Open, lmp2Accordian] = useState(false);
-  const handleState_lmp2 = () => {
-    lmp2Accordian(!lmp2Open);
-  };
-
-  const [lmgt3Open, lmgt3Accordian] = useState(false);
-  const handleState_lmgt3 = () => {
-    lmgt3Accordian(!lmgt3Open);
-  };
-
   const [lang, setLang] = useState(false);
   const handleTranslate = () => {
     setLang(!lang);
@@ -166,18 +156,18 @@ export default function Season2024() {
         </div>
       </div>
 
-      {/* CATEGORY HYPERCAR */}
+      {/* CATEGORY TDF Teams 2024 */}
       <div className="bg-[rgba(0,0,0,0.4)] rounded-md mt-6">
         <div className="bg-white py-3 px-4 rounded-t-md font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl history-period">
-          <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">
-            {lang ? "Entrées pour" : "Entries for"} 2024 - Hypercar
+          <span className="bg-gradient-to-br from-yellow-400 via-stone-800 to-yellow-950 bg-clip-text text-transparent">
+            {lang ? "Entrées pour" : "Entries for"} 2024 - Tour de France
           </span>
         </div>
         <div>
           <div
             className={
               hypercarOpen
-                ? "grid grid-cols-1 md:grid-cols-2 items-stretch justify-between py-4 px-4 gap-4"
+                ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-stretch justify-between py-4 px-4 gap-4"
                 : "hidden"
             }
           >
@@ -209,53 +199,6 @@ export default function Season2024() {
                 {/* Open Button */}
                 <button
                   onClick={handleState_hypercar}
-                  type="button"
-                  className="mx-auto animate-bounce w-10 h-10 rounded-full border-2 border-white"
-                  title="expand"
-                >
-                  <i className="fa-solid fa-angle-down align-middle"></i>
-                </button>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-
-      {/* CATEGORY LM P2 */}
-      <div className="bg-[rgba(0,0,0,0.4)] rounded-md mt-6">
-        <div className="bg-white py-3 px-4 rounded-t-md font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl history-period">
-          <span className="bg-gradient-to-br from-blue-500 to-red-800 bg-clip-text text-transparent">
-            {lang ? "Entrées pour" : "Entries for"} 2024 - LM P2
-          </span>
-        </div>
-        <div>
-          <div
-            className={
-              lmp2Open
-                ? "grid grid-cols-1 md:grid-cols-2 items-stretch justify-between py-4 px-4 gap-4"
-                : "hidden"
-            }
-          >
-            {/* <TeamCard />*/}
-          </div>
-          <div className="flex flex-wrap justify-center items-center py-5">
-            {lmp2Open ? (
-              <div className="items-center text-white font-extrabold text-xl">
-                {/* Close Button */}
-                <button
-                  onClick={handleState_lmp2}
-                  type="button"
-                  className="mx-auto w-10 h-10 rounded-full border-2 border-white"
-                  title="expand"
-                >
-                  <i className="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-            ) : (
-              <div className="items-center text-white font-extrabold text-xl mt-3">
-                {/* Open Button */}
-                <button
-                  onClick={handleState_lmp2}
                   type="button"
                   className="mx-auto animate-bounce w-10 h-10 rounded-full border-2 border-white"
                   title="expand"
