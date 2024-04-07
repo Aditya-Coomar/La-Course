@@ -67,7 +67,7 @@ export default function LeMans() {
       </div>
       <div className="flex justify-between bg-black text-white text-sm sm:text-base md:text-lg px-3 font-[Montserrat]">
       <div className="py-3">
-          <Link to="https://github.com/Aditya-Coomar"><i className="fa-regular fa-copyright"></i> 2024,&nbsp;<span className="hover:underline hover:underline-offset-4">Aditya Coomar</span></Link>
+          <Link to="https://github.com/Aditya-Coomar" title="View Profile"><i className="fa-regular fa-copyright"></i> 2024&nbsp;<span className="hover:underline hover:underline-offset-4">Aditya Coomar</span></Link>
         </div>
         <div className="py-3">
           <Link

@@ -74,7 +74,7 @@ export default function Description() {
             <a
               href="#tdf_2024"
               type="button"
-              className="align-middle py-3 px-4 bg-white text-xl md:text-2xl rounded-md font-extrabold"
+              className="align-middle py-3 px-2 bg-white text-xl md:text-2xl rounded-md font-extrabold"
             >
               <span className="bg-gradient-to-r from-yellow-400 via-stone-800 to-yellow-600 bg-clip-text text-transparent">
                 2024 {lang ? "Saison" : "Season"}
@@ -83,7 +83,7 @@ export default function Description() {
             <a
               href="#tdf_2023"
               type="button"
-              className="align-middle py-3 px-4 bg-white text-xl md:text-2xl rounded-md font-extrabold"
+              className="align-middle py-3 px-2 bg-white text-xl md:text-2xl rounded-md font-extrabold"
             >
               <span className="bg-gradient-to-r from-yellow-400 via-stone-800 to-yellow-600 bg-clip-text text-transparent">
                 2023 {lang ? "Saison" : "Season"}

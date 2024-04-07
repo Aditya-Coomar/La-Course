@@ -79,7 +79,7 @@ export default function TourDeFrance() {
           </Link>
         </div>
         <div className="py-3">
-          <Link to="https://github.com/Aditya-Coomar"><i className="fa-regular fa-copyright"></i> 2024,&nbsp;<span className="hover:underline hover:underline-offset-4">Aditya Coomar</span></Link>
+          <Link to="https://github.com/Aditya-Coomar"><i className="fa-regular fa-copyright"></i> 2024&nbsp;<span className="hover:underline hover:underline-offset-4">Aditya Coomar</span></Link>
         </div>
       </div>
     </main>
