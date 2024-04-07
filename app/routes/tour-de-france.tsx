@@ -7,6 +7,7 @@ import Season2023 from "~/components/season-2023/tour-de-france-2023";
 import GalleryTourDeFrance from "~/components/gallery/gallery-tour-de-france";
 import { continental } from "~/assets";
 import { Helmet } from "react-helmet";
+import { Link } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -67,6 +68,19 @@ export default function TourDeFrance() {
           alt="Continental Tires"
           className="w-full max-h-[650px]"
         />
+      </div>
+      <div className="flex justify-between bg-black text-white text-sm sm:text-base md:text-lg px-3 font-[Montserrat]">
+        <div className="py-3">
+          <Link
+            to="/le-mans"
+            className="underline underline-offset-4"
+          >
+            &#x2190;{" "}Le Mans
+          </Link>
+        </div>
+        <div className="py-3">
+          <Link to="https://github.com/Aditya-Coomar"><i className="fa-regular fa-copyright"></i> 2024,&nbsp;<span className="hover:underline hover:underline-offset-4">Aditya Coomar</span></Link>
+        </div>
       </div>
     </main>
   );
