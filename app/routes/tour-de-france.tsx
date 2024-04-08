@@ -11,7 +11,7 @@ import { Link } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "24h Le Mans | La Course" },
+    { title: "Tour de France | La Course" },
     { name: "description", content: "Le Mans" },
   ];
 };
